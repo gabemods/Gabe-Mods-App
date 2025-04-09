@@ -1,0 +1,9 @@
+<resources>
+    <!-- Light Mode Colors -->
+    <color name="blue">#1E88E5</color> <!-- Main blue -->
+    <color name="dark_blue">#1565C0</color> <!-- Darker shade -->
+    <color name="white">#FFFFFF</color> <!-- White -->
+    <color name="background">#FFFFFF</color> <!-- White background -->
+    <color name="text_color">#000000</color> <!-- Black text -->
+    <color name="translucent_bg">#80FFFFFF</color> <!-- Semi-transparent white -->
+</resources>
