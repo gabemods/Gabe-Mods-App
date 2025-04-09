@@ -12,6 +12,9 @@ class MainActivity : AppCompatActivity() {
 
         val bottomNavigation: BottomNavigationView = findViewById(R.id.bottomNavigation)
 
+        // Load the HomeFragment by default
+        loadFragment(HomeFragment())
+
         bottomNavigation.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> loadFragment(HomeFragment())
