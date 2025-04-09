@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"/>
+    <item android:id="@+id/nav_mods"
+        android:icon="@drawable/ic_mods"
+        android:title="Mods"/>
+    <item android:id="@+id/nav_games"
+        android:icon="@drawable/ic_games"
+        android:title="Games"/>
+    <item android:id="@+id/nav_learn"
+        android:icon="@drawable/ic_code"
+        android:title="Learn To Code"/>
+</menu>
