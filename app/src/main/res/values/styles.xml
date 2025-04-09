@@ -1,0 +1,15 @@
+<resources>
+    <style name="Theme.App" parent="Theme.MaterialComponents.DayNight">
+        <!-- Primary Colors -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/dark_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Background & Text Colors -->
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:textColor">@color/text_color</item>
+
+        <!-- Translucent Elements -->
+        <item name="android:background">@color/translucent_bg</item>
+    </style>
+</resources>
