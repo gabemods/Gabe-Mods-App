@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace "com.gabemods.app"  // Replace with your actual package name
+    namespace "com.gabemods.app"
     compileSdk 34
 
     defaultConfig {
@@ -28,8 +28,6 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.fragment:fragment-ktx:1.6.2'
-}
-    // Fragment support
-    implementation 'androidx.fragment:fragment-ktx:1.6.2'
-}
+    implementation 'androidx.fragment:fragment-ktx:1.6.2'  // Removed duplicate
+
+}  // ✅ Correctly closing the dependencies block here
