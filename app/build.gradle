@@ -3,6 +3,7 @@ plugins {
 }
 
 android {
+    namespace "com.gabemods.app"  // Replace with your actual package name
     compileSdk 34
 
     defaultConfig {
