@@ -1,0 +1,91 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- Persistent Translucent Toolbar with Logo -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/transparent_black"
+        android:elevation="8dp"
+        android:title="Learn to Code"
+        android:titleTextColor="@android:color/white"
+        android:logo="@drawable/IMG_7790"
+        android:paddingStart="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Learn to Code Title -->
+            <TextView
+                android:id="@+id/learnTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Learn to Code"
+                android:textSize="24sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/learnDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Our goal is to help people learn programming with free tutorials and guides."
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Upcoming Topics -->
+            <TextView
+                android:id="@+id/upcomingTopicsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upcoming Topics:"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+
+            <ListView
+                android:id="@+id/topicsList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@android:color/white"
+                android:dividerHeight="1dp"/>
+
+            <!-- Footer -->
+            <TextView
+                android:id="@+id/footerText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="© 2025 Gabe Mods | All Rights Reserved"
+                android:textSize="14sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_gray"
+        app:menu="@menu/bottom_nav_menu"
+        android:layout_gravity="bottom"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
