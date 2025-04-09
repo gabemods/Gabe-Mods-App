@@ -1,45 +1,32 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
     android:background="@color/black">
 
-    <TextView
-        android:id="@+id/titleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to Gabe Mods"
-        android:textSize="24sp"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:layout_marginBottom="20dp"/>
+    <!-- Persistent Translucent Toolbar with Logo -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/transparent_black"
+        android:elevation="8dp"
+        android:title="Gabe Mods"
+        android:titleTextColor="@android:color/white"
+        android:logo="@drawable/IMG_7790"
+        android:paddingStart="10dp"/>
 
-    <TextView
-        android:id="@+id/subtitleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="This website is currently under development."
-        android:textSize="16sp"
-        android:textColor="@android:color/white"
-        android:gravity="center"
-        android:layout_marginBottom="20dp"/>
+    <FrameLayout
+        android:id="@+id/frameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
-    <Button
-        android:id="@+id/learnToCodeButton"
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Learn to Code"
-        android:backgroundTint="@android:color/holo_blue_light"
-        android:textColor="@android:color/black"/>
-
-    <Button
-        android:id="@+id/contactButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Contact Us"
-        android:backgroundTint="@android:color/holo_blue_light"
-        android:textColor="@android:color/black"
-        android:layout_marginTop="10dp"/>
-</LinearLayout>
+        android:background="@color/dark_gray"
+        app:menu="@menu/bottom_nav_menu"
+        android:layout_gravity="bottom"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
