@@ -1,5 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gabemods.app">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,18 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App">
 
-        <!-- Main Activity -->
-        <activity android:name=".MainActivity">
+        <!-- Main Activity (Explicitly Setting `android:exported`) -->
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
 
-        <!-- Fragments -->
-        <activity android:name=".HomeFragment"/>
-        <activity android:name=".ModsFragment"/>
-        <activity android:name=".GamesFragment"/>
-        <activity android:name=".LearnFragment"/>
+        <!-- Other Activities (Set `android:exported` as needed) -->
+        <activity android:name=".HomeFragment" android:exported="false"/>
+        <activity android:name=".ModsFragment" android:exported="false"/>
+        <activity android:name=".GamesFragment" android:exported="false"/>
+        <activity android:name=".LearnFragment" android:exported="false"/>
+        
     </application>
+
 </manifest>
