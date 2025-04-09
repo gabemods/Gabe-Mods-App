@@ -1,30 +1,29 @@
 package com.gabemods.app
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val learnToCodeButton: Button = findViewById(R.id.learnToCodeButton)
-        val contactButton: Button = findViewById(R.id.contactButton)
+        val bottomNavigation: BottomNavigationView = findViewById(R.id.bottomNavigation)
 
-        learnToCodeButton.setOnClickListener {
-            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.gabemods.com/learn-to-code"))
-            startActivity(intent)
+        bottomNavigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_home -> loadFragment(HomeFragment())
+                R.id.nav_mods -> loadFragment(ModsFragment())
+                R.id.nav_games -> loadFragment(GamesFragment())
+                R.id.nav_learn -> loadFragment(LearnFragment())
+            }
+            true
         }
+    }
 
-        contactButton.setOnClickListener {
-            val emailIntent = Intent(Intent.ACTION_SEND)
-            emailIntent.type = "text/plain"
-            emailIntent.putExtra(Intent.EXTRA_EMAIL, arrayOf("gabemodswebsite@gmail.com"))
-            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Gabe Mods Inquiry")
-            startActivity(Intent.createChooser(emailIntent, "Contact Gabe Mods"))
-        }
+    private fun loadFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().replace(R.id.frameContainer, fragment).commit()
     }
 }
